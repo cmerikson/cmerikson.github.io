@@ -1,0 +1,204 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0; /* Remove default margin to use the full viewport */
+}
+
+.top-bar {
+    background-color: #f1f1f1;
+    padding: 10px;
+}
+
+.centered-content {
+    max-width: 800px;
+    margin: 0 auto; /* Center the content */
+}
+
+/* Style the dropdown button */
+.dropbtn {
+    background-color: #f1f1f1;
+    color: black;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Style the dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; /* Position dropdown below the button */
+    left: 0;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    width: 100%; /* Make the dropdown content full width */
+}
+
+/* Style the links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    display: block;
+    text-decoration: none;
+}
+
+/* Change color on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.top-bar:hover .dropdown-content {
+    display: block;
+}
+
+/* Initially hide all tab content */
+.tab-content {
+    display: none;
+}
+
+/* Show the main content by default */
+.main-content {
+    display: block;
+    text-align: center; /* Center the text */
+}
+
+/* Adjust the positioning of the dropdown content */
+.top-bar {
+    position: relative;
+}
+
+/* Adjust the image size on the main page */
+.main-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Add margin above the small logo */
+.small-logo {
+    max-width: 75px;
+    height: auto;
+    margin-bottom: 10px;
+    margin-top: 10px; /* Add margin above the logo */
+    margin-right: 20px;
+}
+
+/* Style for the logo and link container */
+.logo-and-link {
+    display: flex; /* Use flexbox to position items */
+    align-items: center; /* Center items vertically */
+}
+
+/* Style for the link text */
+.link-text {
+    margin-right: 5px; /* Add some space between the link text and the link */
+}
+
+/* Style the caption */
+figcaption {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+}
+
+/* Style the image container */
+.image-container {
+    display: flex;
+    justify-content: space-around; /* Adjust as needed */
+    margin-top: 20px; /* Add some space above the images */
+}
+
+/* Style individual images */
+.image-container img {
+    max-width: 75%; /* Adjust as needed */
+    height: auto;
+}
+/* Style the image container */
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Style the GIF wrapper */
+.gif-wrapper {
+    margin-bottom: 2px; /* Add space below the GIF */
+}
+
+/* Style the GIF caption */
+.gif-caption {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+}
+
+/* Style the GIF hyperlink */
+.gif-link {
+    text-align: center;
+    margin-top: 2px; /* Add space above the link */
+}
+
+/* Style the hyperlink text */
+.gif-link a {
+    color: #007bff; /* Change the color as needed */
+    text-decoration: none;
+}
+
+/* Change the link color on hover */
+.gif-link a:hover {
+    text-decoration: underline;
+}
+
+/* Style the image slider container */
+.image-slider {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    max-height: auto; /* Adjust the maximum height as needed */
+}
+
+/* Style individual slider content items */
+.slider-content {
+    display: none;
+    width: 100%;
+}
+
+.slider-content img {
+    width: 100%;
+    height: auto;
+}
+
+/* Style the caption */
+.caption {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+}
+
+/* Style the background image container */
+.background-image {
+    background-image: url('PXL_20201117_160848295~2.jpg'); /* Replace with your image path or URL */
+    background-size: cover;
+    background-position: center;
+    height: 800px; /* Adjust the height as needed */
+    position: relative;
+}
+
+/* Style the overlay text */
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white; /* Adjust text color as needed */
+}
+
+.overlay-text h1 {
+    font-size: 3em; /* Adjust the font size of the h1 element */
+}
+
+.overlay-text p {
+    font-size: 1.5em; /* Adjust the font size of the p element */
+}
