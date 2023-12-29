@@ -202,3 +202,13 @@ figcaption {
 .overlay-text p {
     font-size: 1.5em; /* Adjust the font size of the p element */
 }
+
+/* Style the video container */
+.video-container {
+    margin-top: 20px;
+}
+
+/* Style the video title */
+.video-container h3 {
+    margin-bottom: 10px;
+}
