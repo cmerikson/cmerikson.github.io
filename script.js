@@ -76,3 +76,121 @@ function showTab(tabId) {
         selectedTab.style.display = 'block';
     }
 }
+
+const boardElement = document.getElementById("board");
+const messageElement = document.getElementById("message");
+let board, userFirst, moveNumber;
+
+function startGame() {
+    board = [[" ", " ", " "], [" ", " ", " "], [" ", " ", " "]];
+    userFirst = confirm("Select OK to go first. Select Cancel for the computer to go first.");
+    moveNumber = 0;
+    renderBoard();
+    messageElement.textContent = userFirst ? "Your move" : "Computer's move";
+    if (!userFirst) {
+        computerMove();
+    }
+}
+
+function renderBoard() {
+    boardElement.innerHTML = "";
+    for (let i = 0; i < 3; i++) {
+        for (let j = 0; j < 3; j++) {
+            const cell = document.createElement("div");
+            cell.className = "cell";
+            cell.textContent = board[i][j];
+            cell.onclick = () => userMove(i, j);
+            boardElement.appendChild(cell);
+        }
+    }
+}
+
+function userMove(row, col) {
+    if (board[row][col] === " " && userFirst) {
+        board[row][col] = "X";
+        moveNumber++;
+        if (checkWinner("X")) {
+            renderBoard();
+            messageElement.textContent = "Congratulations, you have won.";
+            return;
+        }
+        if (moveNumber >= 9) {
+            renderBoard();
+            messageElement.textContent = "Draw.";
+            return;
+        }
+        userFirst = false;
+        renderBoard();
+        messageElement.textContent = "Computer's move";
+        setTimeout(computerMove, 500);
+    }
+}
+
+function computerMove() {
+    let emptyPositions = getEmptyPositions();
+    let move;
+    if (moveNumber < 2) {
+        move = emptyPositions[Math.floor(Math.random() * emptyPositions.length)];
+    } else {
+        move = findBestMove("O");
+        if (!move) {
+            move = findBestMove("X");
+            if (!move) {
+                move = emptyPositions[Math.floor(Math.random() * emptyPositions.length)];
+            }
+        }
+    }
+    board[move[0]][move[1]] = "O";
+    moveNumber++;
+    if (checkWinner("O")) {
+        renderBoard();
+        messageElement.textContent = "The computer wins.";
+        return;
+    }
+    if (moveNumber >= 9) {
+        renderBoard();
+        messageElement.textContent = "Draw.";
+        return;
+    }
+    userFirst = true;
+    renderBoard();
+    messageElement.textContent = "Your move";
+}
+
+function getEmptyPositions() {
+    const positions = [];
+    for (let i = 0; i < 3; i++) {
+        for (let j = 0; j < 3; j++) {
+            if (board[i][j] === " ") {
+                positions.push([i, j]);
+            }
+        }
+    }
+    return positions;
+}
+
+function checkWinner(mark) {
+    const winConditions = [
+        [board[0][0], board[0][1], board[0][2]],
+        [board[1][0], board[1][1], board[1][2]],
+        [board[2][0], board[2][1], board[2][2]],
+        [board[0][0], board[1][0], board[2][0]],
+        [board[0][1], board[1][1], board[2][1]],
+        [board[0][2], board[1][2], board[2][2]],
+        [board[0][0], board[1][1], board[2][2]],
+        [board[2][0], board[1][1], board[0][2]],
+    ];
+    return winConditions.some(condition => condition.every(cell => cell === mark));
+}
+
+function findBestMove(mark) {
+    for (let [row, col] of getEmptyPositions()) {
+        board[row][col] = mark;
+        if (checkWinner(mark)) {
+            board[row][col] = " ";
+            return [row, col];
+        }
+        board[row][col] = " ";
+    }
+    return null;
+}
