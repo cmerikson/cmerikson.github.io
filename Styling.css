@@ -236,3 +236,13 @@ figcaption {
     font-size: 18px;
     margin-bottom: 20px;
 }
+
+.book-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.book-list > div {
+    flex: 1;
+    padding: 10px;
+}
