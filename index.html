@@ -12,198 +12,187 @@
             <button class="dropbtn" onclick="toggleDropdown()">Menu</button>
             <div class="dropdown-content" id="myDropdown">
                 <a href="#" onclick="openTab('main-page')">Home</a>
-                <a href="#" onclick="openTab('tab1')">About</a>
-                <a href="#" onclick="openTab('tab2')">Research</a>
+                <a href="#" onclick="openTab('cv-tab')">CV</a>
                 <a href="#" onclick="openTab('tab3')">Other</a>
             </div>
         </div>
     </div>
 
+    <!-- Home -->
     <div class="main-content" id="main-page">
-    <div class="background-image">
-        <div class="overlay-text">
-            <h1>Christian M. Erikson</h1>
-        </div>
-    </div>
-     <div class="centered-content">
-        <p>I am a geomorphologist and am currently a Ph.D. Candidate at Dartmouth College. I enjoy studying fluids and fluvial processes. My research often integrates field-based studies and computational methods applied to questions ranging from grain-scale sediment transport to watershed scale hydrological processes.</p>
-    </div>
-</div>
-    
-<div id="tab1" class="tab-content">
-    <div class="centered-content">
-        <h2>Contact</h2>
-        <p>christian.m.erikson.gr@dartmouth.edu</p>
-        <p class="logo-link">
-            <span class="link-text">Google Scholar</span>
-            <a href="https://scholar.google.com/citations?user=PMiuEikAAAAJ&hl=en&authuser=1" target="_blank">link</a>.
-        </p>
-        <h3>Education</h3>
-        <ul>
-            <li>Ph.D. Candidate - Earth Sciences, Dartmouth (Present)</li>
-            <ul>
-                <li>Advisors: Carl Renshaw & Frank Magilligan</li>
-            </ul>
-        </ul>
-        <div class="logo-and-link">
-            <img src="D-Pine_RGB.jpg" alt="Logo" class="small-logo">
-            <p class="logo-link">
-                <span class="link-text">Dartmouth Department of Earth Sciences</span>
-                <a href="https://earthsciences.dartmouth.edu/" target="_blank">website</a>.
-            </p>
-        </div>
-        <ul>
-            <li>B.S. - Earth Sciences, Pennsylvania State University (2021)</li>
-            <ul>
-                <li>Advisor: Roman DiBiase</li>
-            </ul>
-        </ul>
-        <div class="logo-and-link">
-            <img src="PennState.jpg" alt="Logo" class="small-logo">
-            <p class="logo-link">
-                <span class="link-text">DiBiase Geomorphology Group</span>
-                <a href="https://sites.psu.edu/dibiase/" target="_blank">website</a>.
-            </p>
-        </div>
-        <div class="image-container">
-            <div class="gif-wrapper">
-                <img src="kdv_soliton_animation.gif" alt="Soliton">
-            </div>
-            <div class="caption-link">
-                <p class="gif-caption">Two soliton solution</p>
+        <div class="background-image">
+            <div class="overlay-text">
+                <h1>Christian M. Erikson</h1>
             </div>
         </div>
-    </div>
-</div>
-
-<div id="tab2" class="tab-content">
-    <div class="centered-content">
-        <h1>Research</h1>
-        <p class="logo-link">
-            <span class="link-text">GitHub</span>
-            <a href="https://github.com/cmerikson" target="_blank">link</a>.
-        </p>
-        <p class="logo-link">
-            <span class="link-text">Google Scholar</span>
-            <a href="https://scholar.google.com/citations?user=PMiuEikAAAAJ&hl=en&authuser=1" target="_blank">link</a>.
-        </p>
-        <h3>Overview</h3>
-        <p>My research is primarily within the field of geomorphology and focused on fluvial systems. Most of my research is related to the dynamic ineractions between river channel form and process. I am motivated by explaining natural phenomena in a quantitative manner, often making use of a combination of field work, modeling, and data analysis to test hypotheses.</p>
-        <p>I am also interested in fluid mechanics and data science and am fascinated by the Buckingham-Pi Theorem.</p>
-        <h3>Graduate Research</h3>
-        
-        <h4>Runoff Efficiency</h4>
-        <p>At the watershed scale, rivers reflect the conversion of precipitation into surface runoff (Runoff Efficiency). The water balance of a catchment provides the discharge necessary for smaller scale processes to occur, including sediment transport, and influences channel size sometimes through catastrophic floods and often through smaller, repeated channel molding events. As climate changes, the water balance in many watersheds may be fundamentally altered, as has been observed in the Colorado River Basin. Even in more humid regions, many watersheds also show historical temperature sensitivity.</p>
-        <div class="image-container">
-            <img src="Slope_Trends.jpg" alt="Slope">
-            <figcaption>Runoff efficiency temporal trend slope magnitudes from a linear model using precipitation and temperature as inputs at different reference periods. Model runoff efficiency is on the left y-axis (black). Colored bars represent the fraction of the model slope due to the precipitation only model (blue) and the temperature only model (red) plotted as bars. The direction of the bars indicates the sign of the slopes. The absolute value of each bar pair sums to one on the right y-axis. Where the is no bar, the variable is insignificant. The color represents the slope magnitude of the partial models.</figcaption>
-        </div>
-        <h4> Discharge - Drainage Area Scaling </h4>
-        <p>By altering discharge, runoff efficiency also influences the scaling of discharge with drainage area and potentially river channel size. In regions of low runoff efficiecny, discharge scales in a non-linear way. These low runoff efficiency regions may have channels shaped by more infrequent discharges compared to regions where the common assumption of a linear relationship between discharge and drainage area holds (Erikson et al. 2024).</p>
-        <div class="image-container">
-            <img src="Q2_map.jpg" alt="Scaling_map">
-            <figcaption>Kriged scaling parameter values using the mean annual discharge. Gray areas do not have interpolated values.</figcaption>
-        </div>
-        <h4> Sediment Transport</h4>
-        <p>At the grain scale, sediment transport is contingent on stresses generated near the bed surface and is influenced by surrounding particles. In some cases, when finer-grained sediment is added to an existing coarser material, transport inceases. Other times, adding sediment only results in burial. On a regulated river with large sediment supply variation, adding sand to cobbles did not change the mean stress required for cobble transport, but it did change the standard deviation.</p>
-        <div class="image-container">
-            <img src="Ompompanoosuc.jpg" alt="Ompompanoosuc">
-            <figcaption>An orthomosaic of the Ompompanoosuc River. This reach oscillates between being cobbled dominated to being paved in sand.</figcaption>
-        </div>
-        <h4>Alluvial River Channel Form</h4>
-        <p>At the reach scale, the step-pool morphology has many proposed explanations for its formation, but quantitative theory is limited. One category of explanations suggest that steps form where there are rough patches that cause preferentially disentrainment. This idea can be modeled by introducing roughness variation into a coupled system  of Saint Venant - Exner equations.</p>
-        <div class="image-container">
-            <div class="gif-wrapper">
-                <img src="Step_pools.gif" alt="step-pools">
-            </div>
-            <div class="caption-link">
-                <p class="gif-caption">Modeled step pool development</p>
-            </div>
-        </div>
-        
-        <h4>Arctic Rivers</h4>
-        <p>Rivers in permafrost regions are experiencing rapidly rising temperatures, which are likely to leave a distinct signature on the landscape. Working with <a href="https://www.oxy.edu/academics/faculty/evan-nylen-dethier">Evan Dethier</a>, we have been investigating thaw slumps and hypothesizing their role in altering coupled hillslope-channel processes using image segmentation and remote sensing.</p>
-        
-        <h3>Undergraduate Research</h3>
-        <p>As an undergraduate, I worked with <a href="https://jccarr.weebly.com/">Julia Carr</a> and <a href="https://www.geosc.psu.edu/directory/roman-dibiase">Roman DiBiase</a> examining coarse, bedrock rivers in Taiwan. I measured grain size and channel bed roughness using data generated through drone surveys. I also was able to join <a href="https://abngeology.weebly.com/">Al Neely</a> on a trip to Yucaipa Ridge in California to survey the hillslopes after the 2020 El Dorado fire.</p>
-        <div class="image-container">
-            <img src="Taiwan.png" alt="Taiwan">
-            <figcaption>Compiled grain size and roughness measurements supplemented with results from Taiwan. Roughness is quantified as the standard deviation of the detrended channel bed elevation.</figcaption>
-        </div>
-        <h2>Publications</h2>
-        <ul>
-            <li>Erikson, C. M., Renshaw, C. E., & Magilligan, F. J. (2024). Spatial variation in drainage area — Runoff relationships and implications for bankfull geometry scaling. Geomorphology, 446, 108998. https://doi.org/10.1016/j.geomorph.2023.108998</li>
-        </ul>
-    </div>
-</div>
-
-<div id="tab3" class="tab-content">
-    <div class="centered-content">
-        <h3>Field Photographs</h3>
-        <div id="image-slider" class="image-slider">
-            <div class="slider-content">
-                <img src="PXL_20220805_164931848.jpg" alt="Image 2">
-                <p class="caption">Provo River, Utah</p>
-            </div>
-            <div class="slider-content">
-                <img src="PXL_20220529_192857642.jpg" alt="Image 3">
-                <p class="caption">Williams Middle Branch, Vermont</p>
-            </div>
-            <div class="slider-content">
-                <img src="PXL_20201118_003607143.jpg" alt="Image 4">
-                <p class="caption">Bearpaw Reserve, California</p>
-            </div>
-        </div>
-        <h3>Fluid Mechanics</h3>
-        <p>In addition to geomophology, I am interested in fluid mechanics. Here is an example of vortex shedding behind a swimming shark generated using WaterLily.jl .</p>
-    </div>
-    <div class="image-container">
-        <div class="gif-wrapper">
-            <img src="Blue_Shark_Vorticies.gif" alt="Shark">
-        </div>
-        <div class="caption-link">
-            <p class="gif-caption">Code available from Gabe Weymouth</p>
-            <p class="gif-link"><a href="https://github.com/weymouth/WaterLily.jl/blob/master/notebooks/Shark.jl" target="_blank">GitHub</a></p>
-        </div>
-    </div>
-    <div class="centered-content">
-        <h3>Philosophy</h3>
-        <p>I am interested in philosophy and theology, particularly eighteenth century work. Here is an article I wrote at Dartmouth comparing postmodern and puritan interpretations of meaning.</p>
         <div class="centered-content">
-            <a href="Meaning-Beyond-Religion.pdf" target="_blank">Apologia PDF</a>
+            <p>I am a geomorphologist soon beginning a postdoc at GFZ Helmholtz. I enjoy studying fluids and fluvial processes. My research often integrates field-based studies and computational methods applied to questions ranging from grain-scale sediment transport to watershed scale hydrological processes.</p>
+        </div>
+    </div>
+
+    <!-- CV -->
+    <div id="cv-tab" class="tab-content">
+        <div class="centered-content">
+            <h2>Curriculum Vitae</h2>
+            <h3>Contact</h3>
+            <p>christian.m.erikson.gr@dartmouth.edu</p>
+            <p>ORCID: <a href="https://orcid.org/0009-0007-2840-8568" target="_blank">0009-0007-2840-8568</a></p>
+            <p>Website: <a href="https://cmerikson.github.io" target="_blank">cmerikson.github.io</a></p>
+            <p>Google Scholar: <a href="https://scholar.google.com/citations?user=PMiuEikAAAAJ&hl=en" target="_blank">Profile</a></p>
+
+            <h3>Research Interests</h3>
+            <p>Quantitative predictions of landscape dynamics using computational methods and field techniques across grain to watershed scales.</p>
+
+            <h3>Education</h3>
+            <ul>
+                <li><strong>PhD in Fluvial Geomorphology</strong>, Dartmouth College (2025)
+                    <ul>
+                        <li>Thesis: Equilibration of Alluvial River Channels to Unsteady Boundary Conditions</li>
+                        <li>Committee: Carl Renshaw, Frank Magilligan, Marisa Palucis, Elowyn Yager, Evan Dethier</li>
+                    </ul>
+                </li>
+                <li><strong>BS in Earth Sciences</strong>, Pennsylvania State University (2021)
+                    <ul>
+                        <li>Advisor: Roman DiBiase</li>
+                        <li>Project: Grain size and surface roughness mapping from drone surveys in the Liwu River, Taiwan</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Experience</h3>
+            <ul>
+                <li>Postdoctoral Research Assistant, GFZ Helmholtz Center (2025 - Present)</li>
+                <li>Graduate Research Assistant, Dartmouth Earth Sciences (2021 – 2025)</li>
+                <li>Sediment Transport Short Course, Utah State University (Aug 2022)
+                    <ul><li>Director: Peter Wilcock</li></ul>
+                </li>
+                <li>Undergraduate Research Associate, DiBiase Geomorphology Group, Penn State (2020 – 2021)</li>
+                <li>NSF GEMT REU Intern, DiBiase Geomorphology Group, Penn State (Summer 2020)</li>
+            </ul>
+
+            <h3>Awards</h3>
+            <ul>
+                <li>Earle S. Lenker 1956 Graduate Award (2025)</li>
+                <li>GSA Graduate Student Research Grant (2022)</li>
+                <li>EMS Academy for Global Experience Laureate (2020)</li>
+                <li>Benjamin F. Howell, Jr. Award in Geosciences (2020)</li>
+                <li>John & Elizabeth Holmes Teas Scholarship (2020)</li>
+                <li>Dean’s Freshman Scholarship (2018)</li>
+            </ul>
+
+            <h3>Publications</h3>
+            <ul>
+                <li>Erikson, C. M., Renshaw, C. E., & Magilligan, F. M. (2024). Spatial variation in drainage area – runoff relationships and implications for bankfull geometry scaling. <em>Geomorphology</em>, 108998.</li>
+                <li>Erikson, C. M., Renshaw, C. E., Dethier, E. N., & Magilligan, F. M. (2025). Watershed-scale runoff efficiency response to climate variability. <em>Hydrological Processes</em>.</li>
+            </ul>
+
+            <h4>Active Projects</h4>
+            <ul>
+                <li>Erikson, C. M., Warburton, K. L. P., & Renshaw, C. E. A Roughness-Based Model for Incipient Step-Pool Formation in Alluvial Streams. <em>Journal of Geophysical Research: Earth Surface</em>. (In Review)</li>
+                <li>Erikson, C. M., Dethier, E. N., & Renshaw, C. E. Seasonal Dynamics of a Coupled Hillslope - River System in the Arctic Revealed by Semi-Automated Satellite Image Analysis. <em>Remoste Sensing of Environment</em>. (In Review)</li>
+                <li>Erikson, C. M., Renshaw, C. E., & Magilligan, F. M. Finer-Grained Sediment Pulses Decrease Variability in Entrainment Thresholds of Bed Material. <em>Earth Surface Processes and Landforms</em>. (In Review)</li>
+            </ul>
+
+            <h3>Conference Presentations</h3>
+            <ul>
+                <li>2025: Magilligan, F. M., Fields, J. F., Renshaw, C. E., Dethier, E. N., & Erikson, C. M. The longer arc of channel recovery post-dam removal. AAG Annual Meeting, 24–28 Mar 2025.</li>
+                <li>2024: Erikson, C. M., Warburton, K. L. P., & Renshaw, C. E. Modeling the Development of Flow Resistance in Step-Pool Streams. [EP31D-1236] AGU Fall Meeting, 9–13 Dec 2024.</li>
+                <li>2024: Erikson, C. M., Dethier, E. N., & Renshaw, C. E. Linking Hillslope Failures to River Suspended Sediment Concentrations in Permafrost Landscapes. [H43H-0975] AGU Fall Meeting, 9–13 Dec 2024.</li>
+                <li>2024: Magilligan, F. M., Renshaw, C. E., Fields, J. F., & Erikson, C. M. Mechanisms of sediment entrainment and the development of channel bed architecture in gravel-bedded rivers. AAG Annual Meeting, 16–20 Apr 2024.</li>
+                <li>2023: Erikson, C. M., Renshaw, C. E., & Magilligan, F. J. Riverbed response to oscillations in extreme sediment supply conditions caused by flow regulation. [EP13A-01] AGU Fall Meeting, 11–15 Dec 2023.</li>
+                <li>2022: Erikson, C. M., Renshaw, C. E., & Dethier, E. N. Developing regional relationships between hydroclimatic variables and runoff efficiency. [H43D-04] AGU Fall Meeting, 12–16 Dec 2022.</li>
+                <li>2021: Carr, J. C., DiBiase, R. A., Erikson, C. M., Kohlman, C. M., & Yeh, E. C. Discharge, grain size, and bed structure controls on boulder mobility in Swallow Gorge, Taiwan. [EP33A-05] AGU Fall Meeting, 13–17 Dec 2021.</li>
+                <li>2021: Neely, A. B., DiBiase, R. A., Moon, S., Erikson, C. M., & Sklar, L. S. Differences in post-wildfire sediment loading in headwater channels as a function of bare-bedrock exposure on hillslopes. [H084-984982] AGU Fall Meeting, 13–17 Dec 2021.</li>
+                <li>2020: Erikson, C. M., Carr, J. C., DiBiase, R. A., & Kohlman, C. M. Quantifying spatiotemporal patterns of grain size, roughness, and flow resistance in the Liwu River, Taiwan. [EP038-0007] AGU Fall Meeting, 1–17 Dec 2020.</li>
+                <li>2020: Carr, J. C., DiBiase, R. A., Erikson, C. M., & Kohlman, C. M. Quantifying changes in bed state and grain mobility in steep bedrock rivers through repeat UAV photogrammetry surveys. [H086-0003] AGU Fall Meeting, 1–17 Dec 2020.</li>
+            </ul>
+
+            <h3>Teaching & Outreach</h3>
+            <ul>
+                <li>Spring 2024: Teaching Assistant, Geophysics, Dartmouth College</li>
+                <li>Fall 2023: Teaching Assistant, The Soil Natural Resource, Dartmouth College</li>
+                <li>Summer 2023: Teaching Assistant, Natural Disasters and Hazards, Dartmouth College</li>
+                <li>Winter 2022: Teaching Assistant, Evolution of Earth and Life, Dartmouth College</li>
+                <li>Fall 2021: STEM Mentor for Elko High School, ManyMentors Program, Elko, NV</li>
+                <li>Summer 2021: Teaching Assistant, Natural Disasters and Hazards, Dartmouth College</li>
+            </ul>
+
+            <h3>Other Publications</h3>
+            <ul>
+                <li>DiBiase, R., Moon, S., Neely, A., Carr, J., Argueta, M., Erikson, C. (2023). UAV surveys of Yucaipa Ridge. OpenTopography.</li>
+                <li>Erikson, C. M. (2021). Communities in Crisis: Student Voices on Climate Change.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Other -->
+    <div id="tab3" class="tab-content">
+        <div class="centered-content">
+            <h3>Field Photographs</h3>
+            <div id="image-slider" class="image-slider">
+                <div class="slider-content">
+                    <img src="PXL_20220805_164931848.jpg" alt="Image 2">
+                    <p class="caption">Provo River, Utah</p>
+                </div>
+                <div class="slider-content">
+                    <img src="PXL_20220529_192857642.jpg" alt="Image 3">
+                    <p class="caption">Williams Middle Branch, Vermont</p>
+                </div>
+                <div class="slider-content">
+                    <img src="PXL_20201118_003607143.jpg" alt="Image 4">
+                    <p class="caption">Bearpaw Reserve, California</p>
+                </div>
+            </div>
+            <h3>Fluid Mechanics</h3>
+            <p>In addition to geomophology, I am interested in fluid mechanics. Here is an example of vortex shedding behind a swimming shark generated using WaterLily.jl .</p>
+        </div>
+        <div class="image-container">
+            <div class="gif-wrapper">
+                <img src="Blue_Shark_Vorticies.gif" alt="Shark">
+            </div>
+            <div class="caption-link">
+                <p class="gif-caption">Code available from Gabe Weymouth</p>
+                <p class="gif-link"><a href="https://github.com/weymouth/WaterLily.jl/blob/master/notebooks/Shark.jl" target="_blank">GitHub</a></p>
+            </div>
+        </div>
+        <div class="centered-content">
+            <h3>Philosophy</h3>
+            <p>I am interested in philosophy and theology, particularly eighteenth century work. Here is an article I wrote at Dartmouth comparing postmodern and puritan interpretations of meaning.</p>
+            <div class="centered-content">
+                <a href="Meaning-Beyond-Religion.pdf" target="_blank">Apologia PDF</a>
+                <p></p>
+            </div> 
+            <p>Philosophical works I have enjoyed:</p>
+            <div class="book-list">
+            <div> <!-- First Column -->
+                <p><strong>Book 1:</strong> Ethical Writings (Vol. 8) by Jonathan Edwards</p>
+                <p><strong>Book 2:</strong> Freedom of the Will (Vol. 1) by Jonathan Edwards</p>
+                <p><strong>Book 3:</strong> Original Sin (Vol. 3) by Jonathan Edwards</p>
+                <p><strong>Book 4:</strong> Religious Affections (Vol. 2) by Jonathan Edwards</p>
+            </div>
+            <div> <!-- Second Column -->
+                <p><strong>Book 5:</strong> Thus Spoke Zarathustra by Friedrich Nietzsche</p>
+                <p><strong>Book 6:</strong> The Republic by Plato</p>
+                <p><strong>Book 7:</strong> The Myth of Sisyphus by Albert Camus</p>
+                <p><strong>Book 8:</strong> Critique of Pure Reason by Immanuel Kant</p>
+            </div>
+            <div> <!-- Third Column -->
+                <p><strong>Book 9:</strong> A Philosophical Enquiry into the Sublime and Beautiful by Edmund Burke 7</p>
+                <p><strong>Book 10:</strong> Fear and Trembling by Soren Kierkegaard</p>
+                <p><strong>Book 11:</strong> The Sickness unto Death by Soren Kierkegaard</p>
+                <p><strong>Book 12:</strong> Confessions by Augustine of Hippo</p>
+            </div>
+        </div>
+        </div>
+        
+        <div class="centered-content">
+            <h3>Weak AI</h3>
+            <div class="message" id="message"></div>
+            <div class="board" id="board"></div>
+            <button onclick="startGame()">Start Game</button>
             <p></p>
-        </div> 
-        <p>Philosophical works I have enjoyed:</p>
-        <div class="book-list">
-        <div> <!-- First Column -->
-            <p><strong>Book 1:</strong> Ethical Writings (Vol. 8) by Jonathan Edwards</p>
-            <p><strong>Book 2:</strong> Freedom of the Will (Vol. 1) by Jonathan Edwards</p>
-            <p><strong>Book 3:</strong> Original Sin (Vol. 3) by Jonathan Edwards</p>
-            <p><strong>Book 4:</strong> Religious Affections (Vol. 2) by Jonathan Edwards</p>
-        </div>
-        <div> <!-- Second Column -->
-            <p><strong>Book 5:</strong> Thus Spoke Zarathustra by Friedrich Nietzsche</p>
-            <p><strong>Book 6:</strong> The Republic by Plato</p>
-            <p><strong>Book 7:</strong> The Myth of Sisyphus by Albert Camus</p>
-            <p><strong>Book 8:</strong> Critique of Pure Reason by Immanuel Kant</p>
-        </div>
-        <div> <!-- Third Column -->
-            <p><strong>Book 9:</strong> A Philosophical Enquiry into the Sublime and Beautiful by Edmund Burke 7</p>
-            <p><strong>Book 10:</strong> Fear and Trembling by Soren Kierkegaard</p>
-            <p><strong>Book 11:</strong> The Sickness unto Death by Soren Kierkegaard</p>
-            <p><strong>Book 12:</strong> Confessions by Augustine of Hippo</p>
         </div>
     </div>
-    </div>
-    
-    <div class="centered-content">
-        <h3>Weak AI</h3>
-        <div class="message" id="message"></div>
-        <div class="board" id="board"></div>
-        <button onclick="startGame()">Start Game</button>
-        <p></p>
-    </div>
-</div>
 
 <script src="script.js"></script>
 </body>
